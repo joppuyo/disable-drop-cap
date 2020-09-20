@@ -2,9 +2,24 @@
 
 /*
  * Plugin name: Disable Drop Cap
+ * Description: Plugin to disable drop cap in Gutenberg editor paragraph block
+ * Plugin URI: https://github.com/joppuyo/remove-drop-cap
+ * Version: 1.0.0
+ * Author: Johannes Siipola
+ * Author URI: https://siipo.la
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-add_action( 'admin_footer', function() {
+require __DIR__ . '/vendor/autoload.php';
+
+$plugin_update_checker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/joppuyo/remove-drop-cap',
+    __FILE__,
+    'remove-drop-cap'
+);
+
+add_action('admin_footer', function () {
     echo <<<HTML
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -30,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   wp.hooks.addFilter(
     "blocks.registerBlockType",
     "sc/gb/remove-drop-cap",
-    removeDropCap
+    removeDropCap,
   );
 });
 </script>
