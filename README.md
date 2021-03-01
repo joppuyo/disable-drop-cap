@@ -4,5 +4,5 @@ Plugin to disable drop cap in Gutenberg editor paragraph block.
 
 ## Requirements
 
-* WordPress 5.5 or 6.5
+* WordPress 5.5 or 5.6
 * PHP 7.0
