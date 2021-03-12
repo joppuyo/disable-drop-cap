@@ -4,7 +4,7 @@
  * Plugin name: Disable Drop Cap
  * Description: Plugin to disable drop cap in Gutenberg editor paragraph block
  * Plugin URI: https://github.com/joppuyo/remove-drop-cap
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Johannes Siipola
  * Author URI: https://siipo.la
  * License: GPLv2 or later
@@ -14,40 +14,46 @@
 require __DIR__ . '/vendor/autoload.php';
 
 $plugin_update_checker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/joppuyo/remove-drop-cap',
+    'https://github.com/joppuyo/disable-drop-cap',
     __FILE__,
     'remove-drop-cap'
 );
 
-add_filter(
-    'block_editor_settings',
-    function ($editor_settings) {
-        global $wp_version;
+add_action('init', 'disable_drop_cap_init');
 
-        if (version_compare($wp_version, '5.7', '>=')) {
-            $editor_settings['__experimentalFeatures']['defaults']['typography']['dropCap'] = false;
-        }
-
-        if (
-            version_compare($wp_version, '5.6', '>=') &&
-            version_compare($wp_version, '5.7', '<')
-        ) {
-            $editor_settings['__experimentalFeatures']['global']['typography']['dropCap'] = false;
-        }
-
-        return $editor_settings;
-    }
-);
-
-
-add_action('admin_footer', function () {
+function disable_drop_cap_init() {
     global $wp_version;
+
+    if (version_compare($wp_version, '5.7', '>=')) {
+        add_filter('block_editor_settings', 'disable_drop_cap_editor_settings_5_7');
+    }
+
+    if (
+        version_compare($wp_version, '5.6', '>=') &&
+        version_compare($wp_version, '5.7', '<')
+    ) {
+        add_filter('block_editor_settings', 'disable_drop_cap_editor_settings_5_6');
+    }
 
     if (
         version_compare($wp_version, '5.5', '>=') &&
         version_compare($wp_version, '5.6', '<'))
     {
+        add_action('admin_footer', 'disable_drop_cap_admin_footer');
+    }
+}
 
+function disable_drop_cap_editor_settings_5_7(array $editor_settings): array {
+    $editor_settings['__experimentalFeatures']['defaults']['typography']['dropCap'] = false;
+    return $editor_settings;
+}
+
+function disable_drop_cap_editor_settings_5_6(array $editor_settings): array {
+    $editor_settings['__experimentalFeatures']['global']['typography']['dropCap'] = false;
+    return $editor_settings;
+}
+
+function disable_drop_cap_admin_footer() {
         echo <<<HTML
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -75,6 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 HTML;
-
-    }
-});
+}
