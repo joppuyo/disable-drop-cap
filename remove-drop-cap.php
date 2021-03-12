@@ -53,8 +53,6 @@ add_action('admin_footer', function () {
 document.addEventListener("DOMContentLoaded", function () {
   var removeDropCap = function(settings, name) {
       
-      console.log(settings)
-      
     if (name !== "core/paragraph") {
       return settings;
     }
