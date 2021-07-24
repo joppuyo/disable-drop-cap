@@ -19,5 +19,5 @@ With WordPress 5.8, you can use the new `theme.json` feature to disable drop cap
 
 ## Requirements
 
-* WordPress 5.5, 5.6 or 5.7
+* WordPress 5.5, 5.6, 5.7 or 5.8
 * PHP 7.0 or later
