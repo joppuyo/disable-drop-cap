@@ -1,6 +1,6 @@
 # Disable Drop Cap
 Requires at least: 5.5
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -9,9 +9,29 @@ Plugin to disable drop cap in Gutenberg editor paragraph block
 
 ## Description
 
-Plugin to disable drop cap in Gutenberg editor paragraph block
+Plugin to disable drop cap in Gutenberg editor paragraph block.
+
+### Note for WordPress 5.8
+
+With WordPress 5.8, you can use the new `theme.json` feature to disable drop caps in your theme. Add a `theme.json` with the following content in the root of your theme.
+
+```json
+{
+    "version": 1,
+    "settings": {
+        "typography": {
+            "dropCap": false
+        }
+    }
+}
+```
+
+This plugin does continue working in WordPress 5.8 but be aware of this alternative solution.
 
 ## Changelog
+
+### 1.3.0 (2021-07-24)
+* Feature: WordPress 5.8 support (thanks @adriantoll)
 
 ### 1.2.1 (2021-03-12)
 * Fix: Bump tested up to 5.7
