@@ -1,5 +1,16 @@
 {
     "require": {
-        "yahnis-elsts/plugin-update-checker": "^4.10"
+        "yahnis-elsts/plugin-update-checker": "^4.10",
+        "wp-cli/wp-cli-bundle": "^2.5"
+    },
+    "require-dev": {
+        "lucatume/wp-browser": "^3.0",
+        "codeception/module-asserts": "^1.3",
+        "codeception/module-phpbrowser": "^1.0",
+        "codeception/module-webdriver": "^1.0",
+        "codeception/module-db": "^1.0",
+        "codeception/module-filesystem": "^1.0",
+        "codeception/module-cli": "^1.0",
+        "codeception/util-universalframework": "^1.0"
     }
 }
