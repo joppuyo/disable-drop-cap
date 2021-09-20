@@ -25,7 +25,7 @@ function disable_drop_cap_init() {
     global $wp_version;
 
     if (version_compare($wp_version, '5.8', '>=')) {
-        add_filter('block_editor_settings', 'disable_drop_cap_editor_settings_5_8');
+        add_filter('block_editor_settings_all', 'disable_drop_cap_editor_settings_5_8');
     }
 
     if (
