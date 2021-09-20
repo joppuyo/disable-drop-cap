@@ -21,5 +21,10 @@
         "codeception/module-filesystem": "^1.0",
         "codeception/module-cli": "^1.0",
         "codeception/util-universalframework": "^1.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.0"
+        }
     }
 }
