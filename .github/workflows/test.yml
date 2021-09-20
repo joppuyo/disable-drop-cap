@@ -45,16 +45,6 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Set Node Version
-        shell: bash -l {0}
-        run: nvm install
-
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: Build
-        run: npx webpack -p
-
       - name: Setup docker
         run: docker-compose up -d
 
