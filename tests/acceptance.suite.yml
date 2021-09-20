@@ -14,7 +14,7 @@ modules:
         - WPWebDriver
     config:
         WPDb:
-            dsn: '%TEST_SITE_DB_DSN%'
+            dsn: 'mysql:host=%TEST_SITE_DB_HOST%;dbname=%TEST_SITE_DB_NAME%'
             user: '%TEST_SITE_DB_USER%'
             password: '%TEST_SITE_DB_PASSWORD%'
             dump: 'tests/_data/dump.sql'
