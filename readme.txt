@@ -30,6 +30,9 @@ This plugin does continue working in WordPress 5.8 but be aware of this alternat
 
 ## Changelog
 
+### 1.3.1 (2021-09-20)
+* Fix: Fix deprecation error in WordPress 5.8
+
 ### 1.3.0 (2021-07-24)
 * Feature: WordPress 5.8 support (thanks @adriantoll)
 

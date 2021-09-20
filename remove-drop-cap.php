@@ -4,7 +4,7 @@
  * Plugin name: Disable Drop Cap
  * Description: Plugin to disable drop cap in Gutenberg editor paragraph block
  * Plugin URI: https://github.com/joppuyo/remove-drop-cap
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Johannes Siipola
  * Author URI: https://siipo.la
  * License: GPLv2 or later
