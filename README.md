@@ -1,5 +1,8 @@
 # Disable Drop Cap
 
+| :warning: | Important notice: This repository is no longer updated. I've released version 2.0 of this plugin, which is [available in the WordPress.org plugin repository](https://wordpress.org/plugins/disable-drop-cap/). Since I've changed the plugin slug from remove-drop-cap to disable-drop-cap, you will need to update to the new version manually. Source code for the new version is available [in a separate GitHub repository.](https://github.com/joppuyo/disable-drop-cap-v2) |
+|---|:---|
+
 Plugin to disable drop cap in Gutenberg editor paragraph block.
 
 ### Note for WordPress 5.8
