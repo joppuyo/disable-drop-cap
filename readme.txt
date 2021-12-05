@@ -30,6 +30,9 @@ This plugin does continue working in WordPress 5.8 but be aware of this alternat
 
 ## Changelog
 
+### 1.4.0 (2021-12-05)
+* Feature: Add a notice to encourage people to update to the new version in the plugin directory
+
 ### 1.3.1 (2021-09-20)
 * Fix: Fix deprecation error in WordPress 5.8
 

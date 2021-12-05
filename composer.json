@@ -1,5 +1,6 @@
 {
     "require": {
-        "yahnis-elsts/plugin-update-checker": "^4.10"
+        "yahnis-elsts/plugin-update-checker": "^4.10",
+        "collizo4sky/persist-admin-notices-dismissal": "^1.4"
     }
 }

@@ -1,50 +1,99 @@
-[
-    {
-        "name": "yahnis-elsts/plugin-update-checker",
-        "version": "v4.10",
-        "version_normalized": "4.10.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-            "reference": "0edd15f67822464af8a23285ce367b30d515a855"
+{
+    "packages": [
+        {
+            "name": "collizo4sky/persist-admin-notices-dismissal",
+            "version": "1.4.4",
+            "version_normalized": "1.4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/w3guy/persist-admin-notices-dismissal.git",
+                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/w3guy/persist-admin-notices-dismissal/zipball/900739eb6b0ec0210465f5983a6d4e0e420289e4",
+                "reference": "900739eb6b0ec0210465f5983a6d4e0e420289e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "time": "2020-12-31T17:12:37+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "persist-admin-notices-dismissal.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collins Agbonghama",
+                    "email": "me@w3guy.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Simple library to persist dismissal of admin notices across pages in WordPress dashboard.",
+            "support": {
+                "issues": "https://github.com/w3guy/persist-admin-notices-dismissal/issues",
+                "source": "https://github.com/w3guy/persist-admin-notices-dismissal"
+            },
+            "install-path": "../collizo4sky/persist-admin-notices-dismissal"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/0edd15f67822464af8a23285ce367b30d515a855",
-            "reference": "0edd15f67822464af8a23285ce367b30d515a855",
-            "shasum": ""
-        },
-        "require": {
-            "ext-json": "*",
-            "php": ">=5.2.0"
-        },
-        "time": "2020-08-21T11:36:45+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "load-v4p10.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Yahnis Elsts",
-                "email": "whiteshadow@w-shadow.com",
-                "homepage": "http://w-shadow.com/",
-                "role": "Developer"
-            }
-        ],
-        "description": "A custom update checker for WordPress plugins and themes. Useful if you can't host your plugin in the official WP repository but still want it to support automatic updates.",
-        "homepage": "https://github.com/YahnisElsts/plugin-update-checker/",
-        "keywords": [
-            "automatic updates",
-            "plugin updates",
-            "theme updates",
-            "wordpress"
-        ]
-    }
-]
+        {
+            "name": "yahnis-elsts/plugin-update-checker",
+            "version": "v4.10",
+            "version_normalized": "4.10.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
+                "reference": "0edd15f67822464af8a23285ce367b30d515a855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/0edd15f67822464af8a23285ce367b30d515a855",
+                "reference": "0edd15f67822464af8a23285ce367b30d515a855",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.2.0"
+            },
+            "time": "2020-08-21T11:36:45+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "load-v4p10.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yahnis Elsts",
+                    "email": "whiteshadow@w-shadow.com",
+                    "homepage": "http://w-shadow.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A custom update checker for WordPress plugins and themes. Useful if you can't host your plugin in the official WP repository but still want it to support automatic updates.",
+            "homepage": "https://github.com/YahnisElsts/plugin-update-checker/",
+            "keywords": [
+                "automatic updates",
+                "plugin updates",
+                "theme updates",
+                "wordpress"
+            ],
+            "install-path": "../yahnis-elsts/plugin-update-checker"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

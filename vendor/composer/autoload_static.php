@@ -4,15 +4,21 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6b3a6389b7d72aaaaf51a85d6ae6c5ba
+class ComposerStaticInit64d54a85282dbc7f92303909c59370ac
 {
     public static $files = array (
         '689b08b7620712b04324ecd7ed167c6b' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/load-v4p10.php',
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PAnD' => __DIR__ . '/..' . '/collizo4sky/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->classMap = ComposerStaticInit64d54a85282dbc7f92303909c59370ac::$classMap;
 
         }, null, ClassLoader::class);
     }

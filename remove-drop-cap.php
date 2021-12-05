@@ -4,7 +4,7 @@
  * Plugin name: Disable Drop Cap
  * Description: Plugin to disable drop cap in Gutenberg editor paragraph block
  * Plugin URI: https://github.com/joppuyo/remove-drop-cap
- * Version: 1.3.1
+ * Version: 1.4.0
  * Author: Johannes Siipola
  * Author URI: https://siipo.la
  * License: GPLv2 or later
@@ -94,3 +94,17 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 HTML;
 }
+
+function disable_drop_cap_update_nag() {
+    if (!PAnD::is_admin_notice_active('disable-drop-cap-update-nag-7')) {
+        return;
+    }
+
+    echo '<div data-dismissible="disable-drop-cap-update-nag-7" class="notice notice-warning is-dismissible">';
+    echo '<p>Version 1 of Disable Drop Cap is no longer being maintained. Please update to version 2 which is <a href="https://wordpress.org/plugins/disable-drop-cap/" target="_blank">available in the WordPress plugin directory</a>. You can deactivate and remove the old version once you have installed the new version.</p>';
+    echo '</div>';
+}
+
+add_action('admin_notices', 'disable_drop_cap_update_nag');
+
+add_action('admin_init', ['PAnD', 'init']);
